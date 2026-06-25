@@ -1,0 +1,95 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* Navbar brand glow */
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 60px 20px !important;
+}
+.hero-section .lead {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Book cards */
+.book-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.book-cover {
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+.book-cover-placeholder {
+  height: 220px;
+  width: 100%;
+}
+
+/* Form controls */
+.form-control:focus {
+  border-color: #212529;
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.15);
+}
+
+/* Buttons */
+.btn-dark {
+  background-color: #212529;
+  border-color: #212529;
+}
+.btn-dark:hover {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #343a40;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: transparent;
+}
+.breadcrumb-item a {
+  color: #495057;
+  text-decoration: none;
+}
+.breadcrumb-item a:hover {
+  color: #212529;
+}
+
+/* Table */
+.table th {
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,54 @@
+{% extends "pages/base.html" %}
+{% block content %}
+
+  <div class="row g-5 mb-5">
+    <div class="col-md-6">
+      <h2 class="fw-bold mb-3"><i class="bi bi-book-half me-2"></i>{{ title }}</h2>
+      <p class="lead">{{ description }}</p>
+      <p class="text-muted">
+        We are a family-run bookstore located in the heart of Chisinau, Moldova.
+        Our goal is to bring quality books to every reader — from classics to modern bestsellers.
+      </p>
+      <ul class="list-unstyled mt-4">
+        <li class="mb-2">
+          <i class="bi bi-geo-alt-fill text-dark me-2"></i>
+          <strong>Location:</strong> Chisinau, Moldova
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-envelope-fill text-dark me-2"></i>
+          <strong>Email:</strong> contact@olimpbooks.md
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-telephone-fill text-dark me-2"></i>
+          <strong>Phone:</strong> +373 XX XXX XXX
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h5 class="card-title fw-bold mb-4">
+            <i class="bi bi-chat-left-text me-2"></i>Send us a message
+          </h5>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Your Name</label>
+              <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Message</label>
+              <textarea name="message" class="form-control" rows="4"
+                        placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100 py-2">
+              <i class="bi bi-send me-2"></i>Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

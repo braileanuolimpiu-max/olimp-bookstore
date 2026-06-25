@@ -1,0 +1,27 @@
+{% extends "pages/base.html" %}
+{% block content %}
+
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h3 class="card-title text-center fw-bold mb-4">
+            <i class="bi bi-box-arrow-in-right me-2"></i>Login
+          </h3>
+          <form method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark w-100 py-2 mt-2 fw-bold">
+              Login
+            </button>
+          </form>
+          <p class="text-center text-muted mt-3 mb-0">
+            No account yet?
+            <a href="/register/" class="text-dark fw-bold">Register here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
